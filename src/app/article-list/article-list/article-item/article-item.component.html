@@ -1,0 +1,24 @@
+<article class="article">
+  <div class="article__img">
+    <img [src]="article.image" class="article__img_image" alt="">
+  </div>
+
+  <div class="article__body">
+    <header class="article__body-header">
+      <span class="article__body-header_content">{{article.label}}</span>
+    </header>
+    <div class="article__body-main">
+
+      <div class="article__body-main-title">
+        <a class="article__body-main-title_link">{{article.tag}}</a>
+      </div>
+
+      <div class="article__body-main-description">
+        <p>{{article.body}}</p>
+      </div>
+    </div>
+    <footer class="article__body-footer">
+      <time class="article__body-footer_time">{{article.time | date}}</time>
+    </footer>
+  </div>
+</article>

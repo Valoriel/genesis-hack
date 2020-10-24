@@ -5,7 +5,7 @@
 }
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #eef7ff;}
 
 input[type="checkbox" i] {
   background-color: initial;
@@ -109,4 +109,12 @@ button {
   border-style: outset;
   border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
   border-image: initial;
+}
+
+h1 {
+  display: block;
+  font-size: 2em;
+  margin: 0;
+  font-weight: bold;
+
 }

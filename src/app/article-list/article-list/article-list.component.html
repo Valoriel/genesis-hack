@@ -1,1 +1,12 @@
-<p>article-list works!</p>
+<section class="articles">
+  <header class="articles__header">
+    <div class="articles__header-cell">
+      <h1 class="articles__header-cell_title">Статьи 101</h1>
+    </div>
+  </header>
+
+  <div class="articles__main">
+    <app-article-item [routerLink]="articleMock.id" [article]="articleMock"></app-article-item>
+    <app-article-item [article]="articleMock"></app-article-item>
+  </div>
+</section>
