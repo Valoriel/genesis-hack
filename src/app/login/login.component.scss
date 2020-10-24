@@ -1,0 +1,110 @@
+.login-modal {
+  margin: 20px auto;
+  padding: 42px 48px 48px;
+  max-width: 420px;
+  position: relative;
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #c6e6fb;
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    margin-bottom: 36px;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: .5px;
+    color: #345478;
+    text-align: center;
+  }
+
+  &__form {
+    .form-line {
+      margin-bottom: 20px;
+
+      &__placeholder {
+        display: block;
+        position: relative;
+
+        &_text {
+          display: block;
+          padding: 0 40px 0 20px;
+          width: 100%;
+          position: absolute;
+          top: 18px;
+          left: 0;
+          font-size: 11px;
+          line-height: 1;
+          cursor: text;
+          text-align: left;
+          color: #8a959d;
+          transition: all .24s ease-in-out;
+        }
+
+        &_input {
+          padding: 0 19px;
+          width: 100%;
+          height: 45px;
+          border-radius: 4px;
+          border: 1px solid #c6e6fb;
+          background: #fff;
+          color: #345478;
+          font-size: 12px;
+        }
+      }
+    }
+    .form-submit {
+      padding-top: 10px;
+
+      button {
+        width: 100%;
+        cursor: pointer;
+      }
+    }
+    .form-forgot {
+      padding-top: 20px;
+      text-align: center;
+      font-size: 12px;
+      color: #345478;
+    }
+  }
+
+  &__forgot {
+    padding-top: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: #345478;
+  }
+
+  &__social {
+
+    &_text {
+      padding: 38px 0 24px;
+      text-align: center;
+      font-size: 10px;
+      font-weight: 500;
+      color: #2556c4;
+      letter-spacing: .5px;
+    }
+
+    &-wrap {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      &_item {
+        flex: 0 1 45px;
+        margin: 0 3px;
+        isplay: inline-block;
+        vertical-align: top;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background: #fff;
+        color: #1446b8;
+        text-align: center;
+        transition: background .24s cubic-bezier(.7,0,.9,1),color .16s linear;
+      }
+    }
+  }
+}

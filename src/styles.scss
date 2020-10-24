@@ -1,4 +1,112 @@
 /* You can add global styles to this file, and also import other style files */
 
+* {
+  box-sizing: border-box;
+}
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+input[type="checkbox" i] {
+  background-color: initial;
+  cursor: default;
+  box-sizing: border-box;
+  margin: 3px 3px 3px 4px;
+  padding: initial;
+  border: initial;
+}
+
+input {
+  -webkit-writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+  margin: 0em;
+  font: 400 13.3333px Arial;
+  padding: 1px 2px;
+  border-width: 2px;
+  border-style: inset;
+  border-image: initial;
+}
+
+
+
+.btn-primary {
+  display: inline-block;
+  height: 40px;
+  position: relative;
+  padding: 12px 25px;
+  overflow: hidden;
+  z-index: 1;
+  border: 1px solid #fff;
+  border-radius: 100px;
+  background: #fff;
+  color: #2556c4;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-transition: border .42s,background .24s,color .24s;
+  transition: border .42s,background .24s,color .24s;
+  -webkit-transition-timing-function: cubic-bezier(.7,0,.9,1);
+  transition-timing-function: cubic-bezier(.7,0,.9,1);
+
+  &:before {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    right: -30px;
+    margin: -15px -1px 0 0;
+    z-index: -1;
+    content: "";
+    border-radius: 50%;
+    background: #12295d;
+    transform-origin: 100% 50%;
+    -webkit-transform: scaleY(2);
+    transform: scaleY(2);
+    transition: transform .3s,opacity .3s;
+    transition-timing-function: cubic-bezier(.7,0,.9,1);
+  }
+
+  &.blue {
+    border-color: #2556c4;
+    background-color: #2556c4;
+    color: #fff;
+  }
+}
+
+button {
+  appearance: button;
+  -webkit-writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  color: -internal-light-dark(black, white);
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: center;
+  align-items: flex-start;
+  cursor: default;
+  background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+  box-sizing: border-box;
+  margin: 0em;
+  font: 400 13.3333px Arial;
+  padding: 1px 6px;
+  border-width: 2px;
+  border-style: outset;
+  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+  border-image: initial;
+}

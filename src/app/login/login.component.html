@@ -1,1 +1,24 @@
-<p>login works!</p>
+<div class="login-modal">
+  <span class="login-modal__header">Авторизация</span>
+
+  <form class="login-modal__form" [formGroup]="loginForm">
+    <div class="form-line">
+      <label class="form-line__placeholder">
+        <span class="form-line__placeholder_text">Email</span>
+        <input class="form-line__placeholder_input" formControlName="email" type="email">
+      </label>
+    </div>
+    <div class="form-line">
+      <label class="form-line__placeholder">
+        <span class="form-line__placeholder_text">Пароль</span>
+        <input class="form-line__placeholder_input" formControlName="password" type="email">
+      </label>
+    </div>
+
+    <div class="form-submit">
+      <button class="btn-primary blue">Войти</button>
+    </div>
+
+    <div class="form-forgot"></div>
+  </form>
+</div>
