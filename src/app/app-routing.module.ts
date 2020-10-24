@@ -12,7 +12,11 @@ const appRoutes: Routes = [
     path: 'login',
     component: LoginComponent,
     canActivate: [LoginGuard]
-  }
+  },
+  {
+    path: 'articles',
+    loadChildren: () => import('./article-list/article-list.module').then(m => m.ArticleListModule),
+  },
 ];
 
 @NgModule({
