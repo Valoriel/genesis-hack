@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {ArticleService} from '../../services/article.services';
+import {Observable} from 'rxjs';
+import {ArticleInterface} from '../../../shared/interfaces/article.interface';
 
 @Component({
   selector: 'app-article-list',
@@ -7,20 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArticleListComponent implements OnInit {
 
-  articleMock = {
-    id: 1,
-    image: 'https://cdn.investments101.ru/uploads/articles/25/small_image.jpg?ts=1593689972',
-    label: 'Финансовая грамотность',
-    tag: 'Как инвесторы зарабатывают на ИИС',
-    body: 'За первый квартал 2020 года количество индивидуальных инвестиционных счетов на Московской бирже\n' +
-      '          увеличилось на 407 тысяч и перевалило отметку в 2 миллиона. Если вы все еще размышляете,\n' +
-      '          не открыть ли ИИС, эта статья для вас: в ней мы расскажем, как устроен счет,\n' +
-      '          сколько можно заработать на нем и что можно купить на ИИС в 2020 году.',
-    time: '2020-07-02T14:39:00+03:00'
-  };
-  constructor() { }
+  articleList: Observable<Array<ArticleInterface>>;
+
+  constructor(private articleService: ArticleService) { }
 
   ngOnInit(): void {
+    this.articleList = this.articleService.getAllArticles();
   }
 
 }

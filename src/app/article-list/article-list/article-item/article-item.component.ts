@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {ArticleInterface} from '../../../../shared/interfaces/article.interface';
 
 @Component({
   selector: 'app-article-item',
@@ -6,7 +7,7 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./article-item.component.scss']
 })
 export class ArticleItemComponent implements OnInit {
-  @Input() article: any;
+  @Input() article: ArticleInterface;
 
   constructor() { }
 

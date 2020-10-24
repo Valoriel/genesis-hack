@@ -39,9 +39,11 @@
     width: calc(100% - 30px);
     max-width: 1266px;
     display: flex;
+    flex-wrap: wrap;
 
     app-article-item {
       cursor: pointer;
+      margin-bottom: 16px;
       &:nth-child(odd) {
         margin-right: 16px;
       }

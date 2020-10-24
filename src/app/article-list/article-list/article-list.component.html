@@ -7,7 +7,6 @@
   </header>
 
   <div class="articles__main">
-    <app-article-item [routerLink]="articleMock.id" [article]="articleMock"></app-article-item>
-    <app-article-item [article]="articleMock"></app-article-item>
+    <app-article-item *ngFor="let article of articleList | async" [routerLink]="article.id" [article]="article"></app-article-item>
   </div>
 </section>

@@ -1,7 +1,7 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { LoginComponent } from './login/login.component';
-import {LoginGuard} from './shared/guards/login.guard';
+import { AuthGuard } from './shared/guards/login.guard';
 
 const appRoutes: Routes = [
   { path: '',
@@ -10,12 +10,12 @@ const appRoutes: Routes = [
   },
   {
     path: 'login',
-    component: LoginComponent,
-    canActivate: [LoginGuard]
+    component: LoginComponent
   },
   {
     path: 'articles',
     loadChildren: () => import('./article-list/article-list.module').then(m => m.ArticleListModule),
+    canActivate: [AuthGuard]
   },
 ];
 
