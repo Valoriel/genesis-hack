@@ -75,7 +75,16 @@
       <hr>
       <p>ИИС — хороший выбор для начала инвестиционного пути. Он позволяет повысить доходность портфеля, не прибегая к высокому риску. Опытные инвесторы могут воспользоваться другим преимуществом ИИС: не платить налог на доход.</p>
     </div>
-    <app-rating></app-rating>
+
+
+    <div class="rating-component">
+      <span>Насколько трудна данная статья для понимания?</span>
+      <mat-radio-group class="radio" [(ngModel)]="score" (ngModelChange)="articleRate()">
+        <mat-radio-button *ngFor="let difficulty of difficulties; let i = index" [value]="i">
+          {{difficulty}}
+        </mat-radio-button>
+      </mat-radio-group>
+    </div>
 
   </div>
 </div>

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {ArticleService} from '../../services/article.services';
 import {Observable} from 'rxjs';
 import {ArticleInterface} from '../../../shared/interfaces/article.interface';
+import {LoginService} from '../../services/login.service';
+import {tap} from 'rxjs/operators';
 
 @Component({
   selector: 'app-article-list',
@@ -12,7 +14,7 @@ export class ArticleListComponent implements OnInit {
 
   articleList: Observable<Array<ArticleInterface>>;
 
-  constructor(private articleService: ArticleService) { }
+  constructor(private articleService: LoginService) { }
 
   ngOnInit(): void {
     this.articleList = this.articleService.getAllArticles();

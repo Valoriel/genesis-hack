@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ArticleService} from '../../services/article.services';
+import {LoginService} from '../../services/login.service';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-article',
@@ -8,8 +10,20 @@ import {ArticleService} from '../../services/article.services';
 })
 export class ArticleComponent implements OnInit {
 
-  constructor() { }
+  article: any;
+  difficulties: string[] = ['Очень легко', 'Легко', 'Нормально', 'Сложно', 'Очень сложно'];
+  score = 0;
 
-  ngOnInit(): void {}
+  constructor(private articleService: LoginService,
+              private route: ActivatedRoute) { }
+
+  ngOnInit(): void {
+    this.article = this.articleService.getArticleById(this.route.snapshot.params.userId).subscribe(res => {
+    });
+  }
+
+  articleRate(): void {
+    this.articleService.rateArticle(this.route.snapshot.params.userId, this.score).subscribe();
+  }
 
 }
