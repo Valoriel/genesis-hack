@@ -4,14 +4,14 @@
   <form class="login-modal__form" [formGroup]="loginForm">
     <div class="form-line">
       <label class="form-line__placeholder">
+        <input [class.form-line__placeholder_active]="loginForm.controls['email'].value" class="form-line__placeholder_input" formControlName="email" type="email">
         <span class="form-line__placeholder_text">Email</span>
-        <input class="form-line__placeholder_input" formControlName="email" type="email">
       </label>
     </div>
     <div class="form-line">
       <label class="form-line__placeholder">
+        <input [class.form-line__placeholder_active]="loginForm.controls['password'].value" class="form-line__placeholder_input" formControlName="password" type="password">
         <span class="form-line__placeholder_text">Пароль</span>
-        <input class="form-line__placeholder_input" formControlName="password" type="email">
       </label>
     </div>
 

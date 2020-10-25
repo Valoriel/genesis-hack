@@ -50,6 +50,17 @@
           background: #fff;
           color: #345478;
           font-size: 12px;
+
+          &:focus {
+
+            & + .form-line__placeholder_text {
+              top: 5px;
+            }
+          }
+        }
+
+        .form-line__placeholder_active + .form-line__placeholder_text {
+          top: 5px;
         }
       }
     }
