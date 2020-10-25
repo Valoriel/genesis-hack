@@ -25722,3 +25722,30 @@ app-rating {
   justify-content: flex-start;
   padding-top: 30px;
 }
+
+.rating-component, .radio {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+
+  mat-radio-button {
+    margin-bottom: 5px;
+  }
+  span {
+    font-weight: bold;
+  }
+
+  ::ng-deep .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {  /*click effect color change*/
+    background-color: #5085FF !important;
+  }
+
+  ::ng-deep .mat-radio-button.mat-accent .mat-radio-inner-circle {
+    background-color: #5085FF!important;   /*inner circle color change*/
+  }
+
+  ::ng-deep.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+    border-color: #5085FF!important; /*outer ring color change*/
+  }
+}
+

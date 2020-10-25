@@ -24,7 +24,8 @@ export class ArticleComponent implements OnInit {
   }
 
   articleRate(): void {
-    this.articleService.rateArticle(this.route.snapshot.params.userId, this.score).subscribe(
+    const tmpScore = this.score + 1;
+    this.articleService.rateArticle(this.route.snapshot.params.userId, tmpScore).subscribe(
       () => this.router.navigate(['/articles'], { queryParams: { recomended: true } }));
   }
 
