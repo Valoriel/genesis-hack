@@ -1,1 +1,9 @@
-<p>rating works!</p>
+<div class="rating-component">
+ <span>Насколько трудна данная статья для понимания?</span>
+  <mat-radio-group
+  class="radio">
+    <mat-radio-button *ngFor="let difficulty of difficulties" [value]="difficulty">
+      {{difficulty}}
+    </mat-radio-button>
+  </mat-radio-group>
+</div>

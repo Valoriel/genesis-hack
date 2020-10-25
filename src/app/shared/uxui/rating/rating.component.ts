@@ -9,7 +9,8 @@ export class RatingComponent implements OnInit {
 
   constructor() { }
 
+  difficulties: string[] = ['Очень легко', 'Легко', 'Нормально', 'Сложно', 'Очень сложно'];
+
   ngOnInit(): void {
   }
-
 }

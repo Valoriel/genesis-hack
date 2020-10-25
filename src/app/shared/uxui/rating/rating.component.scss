@@ -1,0 +1,10 @@
+.rating-component, .radio {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  span {
+    font-size: 200;
+    font-weight: bold;
+  }
+}
+

@@ -8,13 +8,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {ReactiveFormsModule} from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { RatingComponent } from './shared/uxui/rating/rating.component';
-import {MatRadioModule} from '@angular/material/radio';
+import { UxuiModule } from './shared/uxui/uxui.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RatingComponent,
   ],
   imports: [
     BrowserModule,
@@ -22,7 +21,7 @@ import {MatRadioModule} from '@angular/material/radio';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     MatFormFieldModule,
-    MatRadioModule,
+    UxuiModule
   ],
   providers: [],
   bootstrap: [AppComponent]

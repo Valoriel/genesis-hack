@@ -25715,3 +25715,10 @@ i .ruble:before {
 		margin-right: -10px
 	}
 }
+
+app-rating {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-top: 30px;
+}
