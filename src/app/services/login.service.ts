@@ -34,6 +34,10 @@ export class LoginService {
   }
 
   getAllArticles(): Observable<any> {
+    return this.http.get(`${this.baseUrl}/article/all?page=0`).pipe(map(res => (res as any).content));
+  }
+
+  getReccomendedArticles(): Observable<any> {
     return this.http.get(`${this.baseUrl}/article/recommended?page=0`).pipe(map(res => (res as any).content));
   }
 

@@ -4,6 +4,7 @@ import {Observable} from 'rxjs';
 import {ArticleInterface} from '../../../shared/interfaces/article.interface';
 import {LoginService} from '../../services/login.service';
 import {tap} from 'rxjs/operators';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-article-list',
@@ -14,10 +15,16 @@ export class ArticleListComponent implements OnInit {
 
   articleList: Observable<Array<ArticleInterface>>;
 
-  constructor(private articleService: LoginService) { }
+  constructor(private articleService: LoginService,
+              private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.articleList = this.articleService.getAllArticles();
+    if (this.route.snapshot.queryParams.recomended) {
+      this.articleList = this.articleService.getReccomendedArticles();
+    } else {
+      this.articleList = this.articleService.getAllArticles();
+    }
+
   }
 
 }

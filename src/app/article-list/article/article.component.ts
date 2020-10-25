@@ -15,7 +15,8 @@ export class ArticleComponent implements OnInit {
   score = 0;
 
   constructor(private articleService: LoginService,
-              private route: ActivatedRoute) { }
+              private route: ActivatedRoute,
+              private router: Router) { }
 
   ngOnInit(): void {
     this.article = this.articleService.getArticleById(this.route.snapshot.params.userId).subscribe(res => {
@@ -23,7 +24,8 @@ export class ArticleComponent implements OnInit {
   }
 
   articleRate(): void {
-    this.articleService.rateArticle(this.route.snapshot.params.userId, this.score).subscribe();
+    this.articleService.rateArticle(this.route.snapshot.params.userId, this.score).subscribe(
+      () => this.router.navigate(['/articles'], { queryParams: { recomended: true } }));
   }
 
 }
